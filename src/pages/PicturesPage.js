@@ -50,10 +50,9 @@ function Picture(props) {
 }
 
 export function PicturesPage() {
-    const {pictures} = {PICTURES_DATA};
     return <div>
             <h1>Pictures</h1>
-            {pictures.map(
+            {PICTURES_DATA.map(
                 (p) => <Picture picture={p} key={p.name} />)}
     </div>
 }

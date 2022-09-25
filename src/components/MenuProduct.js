@@ -13,7 +13,7 @@ function ProductNote(props) {
 export function MenuProduct(props) {
     const {product} = props;
     if (!product?.name) return;
-    return <container>
+    return <>
     <div className="menuProduct">
         <div>{product.name}
             <ProductSize product={product} />
@@ -21,7 +21,7 @@ export function MenuProduct(props) {
         <div>{product.price}</div>
     </div>
         <ProductNote product={product} />
-    </container>
+    </>
 }
 
 MenuProduct.propTypes = {
