@@ -26,7 +26,7 @@ export function MenuProduct(props) {
                     {product.name}
                 </Col>
                 <Col className="menuProduct">
-                    {product.price}
+                    {product.price} &euro;
                 </Col>
                 <Row className="menuProduct">
                     <ProductSize product={product}/>
