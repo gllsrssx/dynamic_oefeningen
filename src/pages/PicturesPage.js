@@ -41,7 +41,7 @@ const PICTURES_DATA = [
 function Picture(props) {
     const {picture} = props;
     return <>
-        <img src={`../../public/images/${picture.name}`}
+        <img src={`./images/${picture.name}`}
              alt={picture.name}
              width="100%"
              style={{margin: "2vw auto 0 auto"}}/>
