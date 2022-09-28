@@ -13,8 +13,7 @@ export function Numbers(props) {
                              xs={4} sm={3} md={2} xxl={1}
                              className={"text-center "}>
                             <Card className="m-2 p-2 shadow-sm">{n}</Card>
-                        </Col>)
-                    }
+                        </Col>)}
                 </Row>
             </Container>
         </div>
