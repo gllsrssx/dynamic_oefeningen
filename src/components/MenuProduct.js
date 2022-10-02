@@ -1,6 +1,5 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import {Container,Row,Col} from 'react-bootstrap';
+
 
 import PropTypes from "prop-types";
 
@@ -40,10 +39,10 @@ export function MenuProduct(props) {
 }
 
 MenuProduct.propTypes = {
-    products: PropTypes.shape({
+    product: PropTypes.shape({
         name: PropTypes.string.isRequired,
-        price: PropTypes.string.isRequired,
-        size: PropTypes.string,
+        price: PropTypes.number.isRequired,
+        size: PropTypes.number,
         note: PropTypes.string
     }).isRequired
 }

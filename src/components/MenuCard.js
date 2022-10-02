@@ -8,6 +8,5 @@ export function MenuCard(props) {
 
         {products.map(
                 (p,key) => <MenuProduct product={p} key ={"p"+key} />)}
-            <MenuProduct />
     </div>
 }
