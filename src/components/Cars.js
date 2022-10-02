@@ -1,43 +1,34 @@
 import PropTypes from "prop-types";
-import {Card, Col, Container, Row} from "react-bootstrap";
-
-function Element (props) {
-    const { key, value } = props;
-    if (!value) return;
-    return <div style={{fontsize: "18px"}}>{key} : {value}</div>}
+import {COLORS} from "../data/data";
+import {MyCard} from "./MyCard";
+import {Section} from "./Section";
+import {Element} from "./Element";
 
 function Car(props) {
     const {car} = props
-    return (
-        <Col xs={12} sm={6} md={4} lg={3} xL={2} xx1={1}>
-        <Card className="m-2 p-2 shadow-sm" >
+    let style = {};
+    if (car.color) {
+        style = { color: COLORS.find(c => c.nl===car.color)["foreground"], backgroundColor: COLORS.find(c => c.nl===car.color)["en"]};
+    }
+    return <MyCard >
             <h4>{car.name}</h4>
-            <div>merk: {car.brand}</div>
-            <div>type: {car.type}</div>
-            <dvi>kleur: {car.color}</dvi>
-        </Card>
-        </Col>
-    );
+            <Element name="merk" value={car.brand} />
+            <Element name="type" value={car.type} />
+            <Element name="opm" value={car.note} />
+            <Element name="kleur" value={car.color} style={style} />
+        </MyCard>
 }
-
 
 export function Cars(props) {
     const {title, cars} = props
-    return (
-        <div className="mt-3 rounded shadow-sm" style={{backgroundColor: "lavender"}}>
-            <h2 className="text-center">{title}</h2>
-            <Container className={"text-center "} >
-                <Row>
-                    {cars.map(car => <Car car={car} key={car.id} />)}
-                </Row>
-            </Container>
-        </div>
-    );
+    return <Section title={title}>
+                {cars.map(car => <Car car={car} key={car.id}/>)}
+        </Section>
 }
-
 Cars.propTypes = {
     name: PropTypes.string,
     brand: PropTypes.string,
     type: PropTypes.string,
+    note: PropTypes.string,
     color: PropTypes.string
 }

@@ -1,23 +1,21 @@
 import PropTypes from "prop-types";
-import {Card, Col, Container, Row} from "react-bootstrap";
+import {MyCard} from "./MyCard";
+import {Section} from "./Section";
+
+
+function Number(props) {
+    const {number} = props;
+    return <MyCard>
+        {number}
+    </MyCard>
+}
 
 export function Numbers(props) {
     const {numbers, title} = props
-    return (
-        <div className="mt-3 rounded shadow-sm" style={{backgroundColor: "lavender"}}>
-            <h2 className="text-center">{title}</h2>
-            <Container>
-                <Row>
-                    {numbers.map((n, i) =>
-                        <Col key={i}
-                             xs={4} sm={3} md={2} xxl={1}
-                             className={"text-center "}>
-                            <Card className="m-2 p-2 shadow-sm">{n}</Card>
-                        </Col>)}
-                </Row>
-            </Container>
-        </div>
-    );
+    return <Section title={title}>
+        {numbers.map((n, i) =>
+            <Number key={i} number={n}/>)}
+    </Section>
 }
 
 Numbers.propTypes = {

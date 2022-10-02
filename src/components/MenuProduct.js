@@ -39,10 +39,10 @@ export function MenuProduct(props) {
 }
 
 MenuProduct.propTypes = {
-    products: PropTypes.shape({
+    product: PropTypes.shape({
         name: PropTypes.string.isRequired,
-        price: PropTypes.string.isRequired,
-        size: PropTypes.string,
+        price: PropTypes.number.isRequired,
+        size: PropTypes.number,
         note: PropTypes.string
     }).isRequired
 }
