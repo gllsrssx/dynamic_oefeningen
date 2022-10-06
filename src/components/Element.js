@@ -3,5 +3,5 @@ export function Element(props) {
     if (!value) return;
 
     const allStyle ={...style,fontSize:"14px"}
-    return <div style={allStyle}>{name? name+":":""} : {value}</div>
+    return <div style={allStyle}>{name? name+":":""}{value}</div>
 }

@@ -1,12 +1,9 @@
 import 'normalize.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
-import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-
-import {PRODUCTS_DATA, NUMBER_DATA, CAR_DATA, PERSON_DATA} from "./data/data";
-
+import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
+import {CAR_DATA, NUMBER_DATA, PERSON_DATA, PRODUCTS_DATA} from "./data/data"
 import {MenuCardPage} from "./pages/MenuCardPage";
 import {PicturesPage} from "./pages/PicturesPage";
 import {NumbersPage} from "./pages/NumbersPage";
