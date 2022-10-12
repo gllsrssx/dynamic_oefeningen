@@ -1,20 +1,20 @@
-import {Section} from "./Section";
-import {Element} from "./Element";
 import {MyCard} from "./MyCard";
+import {Element} from "./Element";
+import {Section} from "./Section";
 import PropTypes from "prop-types";
 
 function City(props) {
     const { city } = props;
 
-    return <MyCard>
+    return <MyCard title={city.name}>
         <h5>{city.name}</h5>
         <Element value={city.numberOfPersons} />
     </MyCard>;
 }
 
 export function Cities(props) {
-    const {cities, title} = props
-    return <Section title={title}>
+    const {cities, title, initOpen} = props
+    return <Section title={title} initOpen={initOpen}>
         {cities.map(c => <City key={c.name} city={c} />)}
     </Section>;
 }

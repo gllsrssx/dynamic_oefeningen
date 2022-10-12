@@ -1,9 +1,11 @@
 import {Cars} from "../components/Cars";
 
 export function CarsPage(props) {
-    const { cars } = props;
+    const {cars} = props
 
     return (
-        <Cars cars={cars} title="Auto's" />
+        <div className="mx-3" >
+            <Cars cars={cars} title="Auto's" initOpen={true}/>
+        </div>
     );
 }

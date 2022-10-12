@@ -1,4 +1,3 @@
-
 import {MenuCard} from "../components/MenuCard";
 
 export function MenuCardPage(props) {
