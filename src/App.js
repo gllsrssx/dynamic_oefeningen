@@ -11,6 +11,7 @@ import {CarsPage} from "./pages/CarsPage";
 import {PersonsPage} from "./pages/PersonsPage";
 import {EventsAndStatePage} from "./pages/EventsAndStatePage";
 
+
 function App() {
     return (
         <Tabs>
