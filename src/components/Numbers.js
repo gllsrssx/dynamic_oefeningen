@@ -5,11 +5,10 @@ import {MyCard} from "./MyCard";
 function Number(props) {
     const {nr, onSelectNumber, favoriteNumber} = props;
     let toDo = undefined;
-    if (onSelectNumber!==undefined)  toDo = () => onSelectNumber(nr);
+    if (onSelectNumber !== undefined) toDo = () => onSelectNumber(nr);
     return <MyCard onSelect={toDo}
-                   extraClass={favoriteNumber===nr ? "bg-warning" : ""}>
-        {nr}
-    </MyCard>;
+                extraClass={favoriteNumber === nr ? "bg-warning" : ""}>{nr}
+        </MyCard>
 }
 
 export function Numbers(props) {
