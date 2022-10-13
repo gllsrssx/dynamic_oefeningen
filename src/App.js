@@ -10,7 +10,7 @@ import {NumbersPage} from "./pages/NumbersPage";
 import {CarsPage} from "./pages/CarsPage";
 import {PersonsPage} from "./pages/PersonsPage";
 import {EventsAndStatePage} from "./pages/EventsAndStatePage";
-
+import "./services/firestore";
 
 function App() {
     return (
