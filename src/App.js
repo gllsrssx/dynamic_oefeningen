@@ -37,9 +37,10 @@ function App() {
             </TabPanel>
             <TabPanel>
                 <PersonsPage persons={PERSON_DATA}/>
-            </TabPanel><TabPanel>
-            <EventsAndStatePage />
-        </TabPanel>
+            </TabPanel>
+            <TabPanel>
+                <EventsAndStatePage />
+            </TabPanel>
         </Tabs>
     );
 }
